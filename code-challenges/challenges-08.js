@@ -28,8 +28,14 @@
 
 const customerAndAge = (obj) => {
   let arr =[]
-  arr=Object.entries(obj);
-  return arr;
+    let keysArr=[]
+    let valuesArr =[]
+    keysArr = Object.keys(obj);
+    valuesArr =  Object.values(obj)
+    for (let i = 0 ; i < keysArr.length ; i++){
+        arr.push(`Customer Name :${keysArr[i]} , Age :${valuesArr[i]}`)
+    }
+    return arr;
 };
 // -------------------------------------------------------------------------------------------------------
 
@@ -56,7 +62,11 @@ const customerAndAge = (obj) => {
 
 const getEntries = (obj) => {
   let arr =[]
+  let p =[]
   arr=Object.entries(obj);
+  for(let i = 0 ; i<arr.length ;i++){
+      p.push(`${arr[i]} `);
+  }
   return arr;
 };
 // -------------------------------------------------------------------------------------------------------
