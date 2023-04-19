@@ -27,9 +27,9 @@
 // ["Customer Name :Romio Joliat , Age :35", "Customer Name :Mario Ristrova , Age :39", ... ]
 
 const customerAndAge = (obj) => {
-  let arr =[]
+    let arr =[]
     let keysArr=[]
-    let valuesArr =[]
+    let valuesArr=[]
     keysArr = Object.keys(obj);
     valuesArr =  Object.values(obj)
     for (let i = 0 ; i < keysArr.length ; i++){
@@ -53,21 +53,18 @@ const customerAndAge = (obj) => {
 //   cookTime: "twoHours",
 //   price: "25$",
 // };
-//
+
 // Output:
 // ["name: pizza", "ingredients: bread,tomato,chicken,mayo", "cookTime: twoHours", "price: 25$"]
-//
+
 // Note:
 // You can solve this challenge by using Object.entries
 
 const getEntries = (obj) => {
-  let arr =[]
-    let p =[]
-    arr=Object.entries(obj);
-    for(let i = 0 ; i<arr.length ;i++){
-        p.push(`${arr[i]} `);
-    }
-    console.log(p);
+   let arr =[];
+   for(const [key , value] of Object.entries(obj)){
+    arr.push(`${key}: ${value}`)
+   }
     return arr;
 };
 // -------------------------------------------------------------------------------------------------------
